@@ -16,6 +16,8 @@ Dark NBA 2K-inspired menus, yellow sliders, and no browser or complicated memory
 
 ## Downloads and status
 
+**[Download the latest release](https://github.com/kylecheck/nba2k16-mycareer-editor/releases/latest)**. Choose `NBA2K16-Linux.zip` for Steam Deck/Linux or `NBA2K16-Windows-x64-preview.zip` for Windows. Extract the ZIP before opening the app.
+
 | Platform | Status | Start |
 |---|---|---|
 | Steam Deck / Linux x64 | Game-tested by Kyle on Steam Deck | `Launch.sh` |
@@ -38,7 +40,7 @@ Python 3 is required. The app uses Tk when available and a native X11 fallback o
 
 For the source download: install **64-bit Python 3.12 or later**, including **Tcl/Tk**, then double-click `Launch-Windows.bat`.
 
-For a packaged Windows release: extract its whole folder and open `NBA2K16-MyCareer-Editor.exe`. Python installation is not needed for that package. A Windows build workflow is included, but no packaged executable is claimed until that workflow has completed successfully.
+For the packaged Windows release: extract its whole folder and open `NBA2K16-MyCareer-Editor.exe`. Python installation is not needed. The package passes automated Windows tests and an executable startup check; live game testing is still needed.
 
 Start the game, load your MyCareer, select `NBA2K16.exe`, Connect, change settings and Apply. **Enable memory access** restarts the editor with a Windows administrator prompt; select the process and reconnect in the new window.
 
@@ -76,6 +78,8 @@ python app.py
 ```
 
 GitHub Actions runs platform tests and can build a Windows x64 folder package with PyInstaller. The Windows preview must pass a real NBA 2K16 session before being marked stable.
+
+To publish an update, change `VERSION` to a new version (for example `v1.3`) and push to `main`. After tests and both builds pass, GitHub Actions publishes the new release with both downloads. Existing releases are preserved; ordinary pushes without a version change do not replace them.
 
 ## Credits and license
 

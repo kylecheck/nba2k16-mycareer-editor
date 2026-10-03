@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   test:
     strategy:
@@ -54,3 +57,37 @@ jobs:
         with:
           name: NBA2K16-Windows-x64-preview
           path: dist/NBA2K16-MyCareer-Editor/
+  release:
+    needs: [linux-package, windows-package]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: packages
+      - run: |
+          cd packages/NBA2K16-Windows-x64-preview
+          zip -r ../../NBA2K16-Windows-x64-preview.zip .
+      - name: Publish new version after successful checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          version=$(tr -d '\r\n' < VERSION)
+          if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+(\.[0-9]+)?$ ]]; then
+            echo 'VERSION must contain a version such as v1.2 or v1.2.1'
+            exit 1
+          fi
+          if gh release view "$version" >/dev/null 2>&1; then
+            echo "Release $version already exists; preserving it."
+            exit 0
+          fi
+          gh release create "$version" \
+            packages/NBA2K16-Linux/NBA2K16-Linux.zip \
+            NBA2K16-Windows-x64-preview.zip \
+            --target "$GITHUB_SHA" \
+            --title "NBA 2K16 MyCareer Editor $version" \
+            --notes 'Native offline MyCareer editor with height up to 10 feet, wingspan, weight, attributes, max attributes, and all badges. Linux/Steam Deck version tested with the game. Windows x64 preview passes automated checks but still needs in-game testing. Download the ZIP for your platform, extract the whole folder, and follow its README. Compatibility is limited to the verified NBA2K16 executable build.'
