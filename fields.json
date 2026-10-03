@@ -1,0 +1,1585 @@
+[
+  {
+    "name": "Height (inches; 84 = 7 ft)",
+    "offset": 0,
+    "source": "appearance",
+    "type": "Float",
+    "bit": 0,
+    "bits": 32,
+    "group": "Player",
+    "min": 54,
+    "max": 120,
+    "step": 1,
+    "factor": 2.54,
+    "display": "feet_inches"
+  },
+  {
+    "name": "Wingspan (inches)",
+    "offset": 4,
+    "source": "appearance",
+    "type": "Float",
+    "bit": 0,
+    "bits": 32,
+    "group": "Player",
+    "min": 40,
+    "max": 150,
+    "step": 1,
+    "factor": 2.54
+  },
+  {
+    "name": "Arm length scale (1 = normal)",
+    "offset": 96,
+    "source": "appearance",
+    "type": "Float",
+    "bit": 0,
+    "bits": 32,
+    "group": "Player",
+    "min": 0.5,
+    "max": 2,
+    "step": 0.01
+  },
+  {
+    "name": "Height beyond position limit",
+    "source": "height_unlock",
+    "offset": 0,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 1,
+    "group": "Player",
+    "options": {
+      "0": "Off",
+      "1": "On"
+    }
+  },
+  {
+    "name": "Primary Position",
+    "offset": 201,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 3,
+    "group": "Player",
+    "options": {
+      "0": "Point Guard",
+      "1": "Shooting Guard",
+      "2": "Small Forward",
+      "3": "Power Forward",
+      "4": "Center"
+    }
+  },
+  {
+    "name": "Secondary Position",
+    "offset": 201,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 3,
+    "group": "Player",
+    "options": {
+      "0": "Point Guard",
+      "1": "Shooting Guard",
+      "2": "Small Forward",
+      "3": "Power Forward",
+      "4": "Center",
+      "5": "Not Applicable"
+    }
+  },
+  {
+    "name": "Weight",
+    "offset": 76,
+    "type": "Float",
+    "bit": 0,
+    "bits": 8,
+    "group": "Player",
+    "min": 50,
+    "max": 1000,
+    "step": 0.5
+  },
+  {
+    "name": "Jersey Number (00 = 100)",
+    "offset": 97,
+    "type": "Binary",
+    "bit": 5,
+    "bits": 7,
+    "group": "Player"
+  },
+  {
+    "name": "Handedness",
+    "offset": 202,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 1,
+    "group": "Player",
+    "options": {
+      "0": "Left",
+      "1": "Right"
+    }
+  },
+  {
+    "name": "Dominant Dunk Hand",
+    "offset": 202,
+    "type": "Binary",
+    "bit": 7,
+    "bits": 2,
+    "group": "Player",
+    "options": {
+      "0": "Left",
+      "1": "Right",
+      "2": "Either"
+    }
+  },
+  {
+    "name": "Play Initiator",
+    "offset": 314,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 1,
+    "group": "Player",
+    "options": {
+      "0": "No",
+      "1": "Yes"
+    }
+  },
+  {
+    "name": "On Court Coach",
+    "offset": 1062,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Alpha dog [Exclusive with Beta dog]",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 1,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Beta dog [Exclusive with Alpha dog]",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Road dog",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Prime time",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Cool and collected",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 5,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Wildcard",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Volume shooter",
+    "offset": 1049,
+    "type": "Binary",
+    "bit": 7,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Closer",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Fierce competitor",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 1,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Spark plug",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Swagger",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Mind games",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Enforcer",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 5,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Championship DNA",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Mentor",
+    "offset": 1050,
+    "type": "Binary",
+    "bit": 7,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Hearth and soul",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Floor general",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 1,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Defensive anchor",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Hardenend",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Gym rat",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Reserved [Exclusive with Friendly]",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Friendly [Exclusive with Reserved]",
+    "offset": 1051,
+    "type": "Binary",
+    "bit": 7,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Low ego [Exclusive with All-Time great]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "All-Time great [Exclusive with Low ego]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 1,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "High work ethic [Exclusive with Legendary work ethic]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Legendary work ethic [Exclusive with High work ethic]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Keep it real [Exclusive with Pat my back]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Pat my back [Exclusive with Keep it real]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 5,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Expressive [Exclusive with Unpredictable/Laid back]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Unpredictable [Exclusive with Expressive/Laid back]",
+    "offset": 1052,
+    "type": "Binary",
+    "bit": 7,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Laid back [Exclusive with Expressive/Unpredictable]",
+    "offset": 1053,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 1,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "ON"
+    }
+  },
+  {
+    "name": "Spin Lay-In",
+    "offset": 1055,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Hot-Stepper",
+    "offset": 1055,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "King of Euros",
+    "offset": 1056,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Acrobat",
+    "offset": 1056,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Tear Dropper",
+    "offset": 1056,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Hustle Points",
+    "offset": 1056,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Screen Outlet",
+    "offset": 1057,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Bank is Open",
+    "offset": 1057,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Relentless Finisher",
+    "offset": 1057,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Post Spin Technician",
+    "offset": 1057,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Drop-Stepper",
+    "offset": 1058,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Post Hoperator",
+    "offset": 1058,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Post Stepback Pro",
+    "offset": 1058,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Dream-Like Up and Under",
+    "offset": 1058,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Post Hook Specialist",
+    "offset": 1059,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Microwave",
+    "offset": 1053,
+    "type": "Binary",
+    "bit": 1,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Unfazed",
+    "offset": 1053,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Corner Specialist",
+    "offset": 1053,
+    "type": "Binary",
+    "bit": 5,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Deadeye",
+    "offset": 1054,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Limitless Range",
+    "offset": 1054,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Fade Ace",
+    "offset": 1054,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Shot Creator",
+    "offset": 1054,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Killer Crossover",
+    "offset": 1059,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Spin Kingpin",
+    "offset": 1059,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Stepback Freeze",
+    "offset": 1059,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Behind the back Pro",
+    "offset": 1060,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Hestitation Stunner",
+    "offset": 1060,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Master of In and Out",
+    "offset": 1060,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Pet move size-up",
+    "offset": 1060,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Flashy Passer",
+    "offset": 1061,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Break Starter",
+    "offset": 1061,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Pick & Roll Maestro",
+    "offset": 1061,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Lob City Passer",
+    "offset": 1061,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Dimer",
+    "offset": 1062,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Perimeter Lockdown Defender",
+    "offset": 1063,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Post Lockdown Defender",
+    "offset": 1063,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Charge Card",
+    "offset": 1063,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Pick Dodger",
+    "offset": 1064,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Interceptor",
+    "offset": 1064,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Pick Pocket",
+    "offset": 1064,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Eraser",
+    "offset": 1064,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Chase Down Artist",
+    "offset": 1065,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Lob City Finisher",
+    "offset": 1055,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Posterizer",
+    "offset": 1055,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Bruiser",
+    "offset": 1065,
+    "type": "Binary",
+    "bit": 2,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Brick Wall",
+    "offset": 1065,
+    "type": "Binary",
+    "bit": 4,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "One Man Fast Break",
+    "offset": 1065,
+    "type": "Binary",
+    "bit": 6,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Transition Finisher",
+    "offset": 1066,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Scrapper",
+    "offset": 1062,
+    "type": "Binary",
+    "bit": 3,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Offensive Crasher",
+    "offset": 1062,
+    "type": "Binary",
+    "bit": 5,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Defensive Crasher",
+    "offset": 1063,
+    "type": "Binary",
+    "bit": 0,
+    "bits": 2,
+    "group": "Badges",
+    "options": {
+      "0": "OFF",
+      "1": "Bronze",
+      "2": "Silver",
+      "3": "Gold"
+    }
+  },
+  {
+    "name": "Standing Layup",
+    "offset": 904,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Driving Layup",
+    "offset": 905,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Post Fadeaway",
+    "offset": 906,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Post Hook",
+    "offset": 907,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Post Control",
+    "offset": 908,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Moving Shot Close",
+    "offset": 910,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Standing Shot Close",
+    "offset": 911,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Moving Shot Mid-Range",
+    "offset": 912,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Standing Shot Mid-Range",
+    "offset": 913,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Moving Shot Three",
+    "offset": 914,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Standing Shot three",
+    "offset": 915,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Free Throw",
+    "offset": 916,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Standing Dunk",
+    "offset": 934,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Driving Dunk",
+    "offset": 935,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "contact Dunk",
+    "offset": 936,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Speed",
+    "offset": 937,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Acceleration",
+    "offset": 938,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Vertical",
+    "offset": 939,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Strength",
+    "offset": 940,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Stamina",
+    "offset": 941,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Hustle",
+    "offset": 942,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Ball Control",
+    "offset": 917,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Passing Vision",
+    "offset": 918,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Passing IQ",
+    "offset": 919,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Passing Accuracy",
+    "offset": 920,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Boxout",
+    "offset": 921,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Offensive Rebound",
+    "offset": 922,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Defensive Rebound",
+    "offset": 923,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Lateral Quickness",
+    "offset": 924,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Pass Perception",
+    "offset": 925,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Block",
+    "offset": 926,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Shot Contest",
+    "offset": 927,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Steal",
+    "offset": 928,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Defensive Consistency",
+    "offset": 929,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "On-Ball Defense IQ",
+    "offset": 930,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Pick And Roll Defense IQ",
+    "offset": 931,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Help Defense IQ",
+    "offset": 932,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Low Post Defense IQ",
+    "offset": 933,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Draw Foul",
+    "offset": 909,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Shot IQ",
+    "offset": 943,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Hands",
+    "offset": 944,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Offensive Consistency",
+    "offset": 946,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  },
+  {
+    "name": "Potential (Auto Calculated)",
+    "offset": 947,
+    "type": "Byte",
+    "bit": 0,
+    "bits": 8,
+    "group": "Attributes"
+  }
+]

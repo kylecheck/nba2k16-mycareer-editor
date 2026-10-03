@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.spec
+startup-error.txt
+connection-diagnostics*.txt
+*.exe
+*.dll
+*.bak
+*.sav

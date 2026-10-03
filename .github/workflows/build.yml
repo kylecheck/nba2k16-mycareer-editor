@@ -1,0 +1,56 @@
+name: Test and build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - run: python -m unittest discover -s tests -v
+  linux-package:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/package_linux.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NBA2K16-Linux
+          path: dist/NBA2K16-Linux.zip
+  windows-package:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - run: python -m pip install pyinstaller==6.22.3
+      - run: python -m PyInstaller --noconfirm --clean --onedir --console --name NBA2K16-MyCareer-Editor --add-data "fields.json;." --add-data "build.json;." app.py
+      - shell: pwsh
+        run: |
+          Copy-Item README.md dist/NBA2K16-MyCareer-Editor/README.md
+          Copy-Item LICENSE dist/NBA2K16-MyCareer-Editor/LICENSE
+          $process = Start-Process dist/NBA2K16-MyCareer-Editor/NBA2K16-MyCareer-Editor.exe -ArgumentList '--self-test' -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw 'Packaged app self-test failed' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NBA2K16-Windows-x64-preview
+          path: dist/NBA2K16-MyCareer-Editor/
